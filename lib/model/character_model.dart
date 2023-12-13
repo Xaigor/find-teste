@@ -24,27 +24,13 @@ class CharacterModel {
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
-    if (code != null) {
-      result.addAll({'code': code});
-    }
-    if (status != null) {
-      result.addAll({'status': status});
-    }
-    if (copyright != null) {
-      result.addAll({'copyright': copyright});
-    }
-    if (attributionText != null) {
-      result.addAll({'attributionText': attributionText});
-    }
-    if (attributionHTML != null) {
-      result.addAll({'attributionHTML': attributionHTML});
-    }
-    if (etag != null) {
-      result.addAll({'etag': etag});
-    }
-    if (data != null) {
-      result.addAll({'data': data.toMap()});
-    }
+    result.addAll({'code': code});
+    result.addAll({'status': status});
+    result.addAll({'copyright': copyright});
+    result.addAll({'attributionText': attributionText});
+    result.addAll({'attributionHTML': attributionHTML});
+    result.addAll({'etag': etag});
+    result.addAll({'data': data.toMap()});
 
     return result;
   }
@@ -131,21 +117,11 @@ class Data {
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
-    if (offset != null) {
-      result.addAll({'offset': offset});
-    }
-    if (limit != null) {
-      result.addAll({'limit': limit});
-    }
-    if (total != null) {
-      result.addAll({'total': total});
-    }
-    if (count != null) {
-      result.addAll({'count': count});
-    }
-    if (results != null) {
-      result.addAll({'results': results.map((x) => x.toMap()).toList()});
-    }
+    result.addAll({'offset': offset});
+    result.addAll({'limit': limit});
+    result.addAll({'total': total});
+    result.addAll({'count': count});
+    result.addAll({'results': results.map((x) => x.toMap()).toList()});
 
     return result;
   }
@@ -249,39 +225,17 @@ class Results {
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
-    if (id != null) {
-      result.addAll({'id': id});
-    }
-    if (name != null) {
-      result.addAll({'name': name});
-    }
-    if (description != null) {
-      result.addAll({'description': description});
-    }
-    if (modified != null) {
-      result.addAll({'modified': modified});
-    }
-    if (thumbnail != null) {
-      result.addAll({'thumbnail': thumbnail.toMap()});
-    }
-    if (resourceURI != null) {
-      result.addAll({'resourceURI': resourceURI});
-    }
-    if (comics != null) {
-      result.addAll({'comics': comics.toMap()});
-    }
-    if (series != null) {
-      result.addAll({'series': series.toMap()});
-    }
-    if (stories != null) {
-      result.addAll({'stories': stories.toMap()});
-    }
-    if (events != null) {
-      result.addAll({'events': events.toMap()});
-    }
-    if (urls != null) {
-      result.addAll({'urls': urls.map((x) => x.toMap()).toList()});
-    }
+    result.addAll({'id': id});
+    result.addAll({'name': name});
+    result.addAll({'description': description});
+    result.addAll({'modified': modified});
+    result.addAll({'thumbnail': thumbnail.toMap()});
+    result.addAll({'resourceURI': resourceURI});
+    result.addAll({'comics': comics.toMap()});
+    result.addAll({'series': series.toMap()});
+    result.addAll({'stories': stories.toMap()});
+    result.addAll({'events': events.toMap()});
+    result.addAll({'urls': urls.map((x) => x.toMap()).toList()});
 
     return result;
   }
@@ -368,12 +322,8 @@ class Thumbnail {
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
-    if (path != null) {
-      result.addAll({'path': path});
-    }
-    if (ext != null) {
-      result.addAll({'extension': ext});
-    }
+    result.addAll({'path': path});
+    result.addAll({'extension': ext});
 
     return result;
   }
@@ -434,18 +384,10 @@ class Comics {
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
-    if (available != null) {
-      result.addAll({'available': available});
-    }
-    if (collectionURI != null) {
-      result.addAll({'collectionURI': collectionURI});
-    }
-    if (items != null) {
-      result.addAll({'items': items.map((x) => x.toMap()).toList()});
-    }
-    if (returned != null) {
-      result.addAll({'returned': returned});
-    }
+    result.addAll({'available': available});
+    result.addAll({'collectionURI': collectionURI});
+    result.addAll({'items': items.map((x) => x.toMap()).toList()});
+    result.addAll({'returned': returned});
 
     return result;
   }
@@ -490,14 +432,14 @@ class Comics {
 }
 
 class Items {
-  String? resourceURI;
-  String? name;
-  String? type;
+  String resourceURI;
+  String name;
+  String type;
 
   Items({
-    this.resourceURI,
-    this.name,
-    this.type,
+    required this.resourceURI,
+    required this.name,
+    required this.type,
   });
 
   Items copyWith({
@@ -515,15 +457,9 @@ class Items {
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
-    if (resourceURI != null) {
-      result.addAll({'resourceURI': resourceURI});
-    }
-    if (name != null) {
-      result.addAll({'name': name});
-    }
-    if (type != null) {
-      result.addAll({'type': type});
-    }
+    result.addAll({'resourceURI': resourceURI});
+    result.addAll({'name': name});
+    result.addAll({'type': type});
 
     return result;
   }
@@ -559,12 +495,12 @@ class Items {
 }
 
 class Urls {
-  String? type;
-  String? url;
+  String type;
+  String url;
 
   Urls({
-    this.type,
-    this.url,
+    required this.type,
+    required this.url,
   });
 
   Urls copyWith({
@@ -580,12 +516,8 @@ class Urls {
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
-    if (type != null) {
-      result.addAll({'type': type});
-    }
-    if (url != null) {
-      result.addAll({'url': url});
-    }
+    result.addAll({'type': type});
+    result.addAll({'url': url});
 
     return result;
   }
