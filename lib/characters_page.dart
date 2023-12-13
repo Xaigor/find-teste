@@ -1,15 +1,13 @@
-import 'package:find_test/services/api_service.dart';
 import 'package:find_test/state/characters_state.dart';
 import 'package:find_test/store/characters_store.dart';
 import 'package:find_test/widget/characters_list_widget.dart';
-import 'package:find_test/widget/slide_panel_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sliding_up_panel/flutter_sliding_up_panel.dart';
 
 import 'model/character_model.dart';
 
 class CharactersPage extends StatefulWidget {
-  CharactersPage({super.key});
+  const CharactersPage({super.key});
 
   @override
   State<CharactersPage> createState() => _CharactersPageState();
@@ -45,9 +43,6 @@ class _CharactersPageState extends State<CharactersPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("TESTE"),
-      // ),
       body: Container(
         color: Colors.white,
         child: SafeArea(
