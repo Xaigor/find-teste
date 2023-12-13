@@ -36,22 +36,7 @@ class SlidePanelWidget extends StatelessWidget {
         }
       },
       enableOnTap: true,
-      //Enable the onTap callback for control bar.
-      dragDown: (details) {
-        print('dragDown');
-      },
-      dragStart: (details) {
-        print('dragStart');
-      },
-      dragCancel: () {
-        print('dragCancel');
-      },
-      dragUpdate: (details) {
-        print(
-            'dragUpdate,${panelController.status == SlidingUpPanelStatus.dragging ? 'dragging' : ''}');
-      },
       dragEnd: (details) {
-        print("dragEnd");
         panelController.hide();
       },
       child: Container(
@@ -76,7 +61,7 @@ class SlidePanelWidget extends StatelessWidget {
                       color: Colors.white,
                       child: ShaderMask(
                           shaderCallback: (rect) {
-                            return LinearGradient(
+                            return const LinearGradient(
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
                               colors: [Colors.black, Colors.transparent],
@@ -95,15 +80,15 @@ class SlidePanelWidget extends StatelessWidget {
                         children: [
                           Text(
                             character?.name ?? "",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 30),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           Text(
                             character?.description ?? "",
-                            style: TextStyle(color: Colors.black54),
+                            style: const TextStyle(color: Colors.black54),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           InkWell(
                             child: Center(
                               child: Container(
@@ -115,14 +100,13 @@ class SlidePanelWidget extends StatelessWidget {
                                         MainAxisAlignment.spaceAround,
                                     children: [
                                       Text(
-                                        "Comics with ${character?.name}: ${character?.comics.items.length.toString()}" ??
-                                            "",
+                                        "Comics with ${character?.name}: ${character?.comics.items.length.toString()}",
                                         textAlign: TextAlign.start,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
                                       ),
-                                      Icon(
+                                      const Icon(
                                         Icons.arrow_forward,
                                         color: Colors.white,
                                       )
