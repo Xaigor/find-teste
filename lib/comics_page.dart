@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
 
 import 'model/character_model.dart';
 
@@ -14,7 +16,7 @@ class ComicsPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               color: Colors.white,
             ),
@@ -23,7 +25,7 @@ class ComicsPage extends StatelessWidget {
           backgroundColor: Colors.red[900],
           title: Text(
             characterName,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white),
           ),
         ),
         body: ListView.builder(

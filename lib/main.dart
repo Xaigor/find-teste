@@ -1,3 +1,4 @@
+import 'package:find_test/test_page.dart';
 import 'package:flutter/material.dart';
 
 import 'characters_page.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const CharactersPage(),
+      home: CharactersPage(),
     );
   }
 }
